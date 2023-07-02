@@ -1,8 +1,13 @@
 import '../../scss/components/recipe-block.scss';
 
 const RecipeBlock = ({recipe} : any) => {
+
+    const handleClick = () => {
+        window.location.href = '/recipe/' + recipe.id;
+    };
+
     return (
-        <div className={'recipe'}>
+        <div className={'recipe'} onClick={handleClick}>
             <div className={'recipe__figure'}>
                 <img src={recipe.image} className={'recipe__image'} alt={recipe.title} />
             </div>

@@ -4,17 +4,19 @@ import {Fragment} from "react";
 import BottomNavigation from "./js/components/bottom-navigation.tsx";
 import "./scss/components/bottom-navigation.scss";
 import Menu from "./js/components/menu.tsx";
+import RecipeDetails from "./js/pages/recipe-details.tsx";
 
 function App() {
   return (
       <Fragment>
-          <Menu />
           <Router>
+              <Menu />
               <Routes>
                   <Route path="/" element={<Recipes />} />
+                  <Route path="/recipe/:id" element={<RecipeDetails />} />
               </Routes>
+              <BottomNavigation />
           </Router>
-          <BottomNavigation />
       </Fragment>
   )
 }
