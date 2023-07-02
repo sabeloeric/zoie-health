@@ -1,4 +1,25 @@
+@import "../mixins/media-query";
+
 .recipes {
-  column-count: 2;
-  column-gap: 20px;
+
+  margin: 2rem 0;
+
+  &__title {
+    font-size: 23px;
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    margin: 1em 0;
+  }
+
+  &__container {
+    margin-top: 2rem;
+    column-count: 2;
+    column-gap: 20px;
+
+    @include media-query(null, tablet) {
+      column-count: 1;
+    }
+  }
 }
