@@ -12,9 +12,10 @@ interface Recipe {
     extendedIngredients: { id: number; original: string }[];
 }
 
-const RecipeDetails = () => {
+const RecipeDetails = (props: any) => {
+    const recipeFromProp = props.recipe;
     const { id } = useParams<{ id: string }>();
-    const [recipe, setRecipe] = useState<Recipe | null>(null);
+    const [recipe, setRecipe] = useState<Recipe | null>(recipeFromProp);
     const [liked, setLiked] = useState(false);
 
     useEffect(() => {

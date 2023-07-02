@@ -10,6 +10,10 @@ Below are instructions on how to run the app on your local machine:
 - yarn run dev
 - visit localhost::5173
 
+## Tests
+To run tests run the following command:
+- yarn run test
+
 ## Assumptions
 
 - The app uses a fixed number of recipes which are already preloaded, these where fetched from [spoonacular API](https://spoonacular.com/food-api/docs)
